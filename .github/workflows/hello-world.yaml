@@ -1,22 +1,21 @@
+
 name: hello world demo
 
 on:
-   push:
-      branches:
-         - main
+  push:
+    branches:
+      - main
 
-permissions: 
-contents: read         
+permissions:
+  contents: read
 
 jobs:
-   say-hello:
-   runs-on: ubuntu-latest
-   
-   steps:    
-       - name: Checkout code
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
         uses: actions/checkout@v3
 
-       - name: Print Hello
+      - name: Print Hello
         run: echo "Hello, GitHub Actions!"
-        
-   
